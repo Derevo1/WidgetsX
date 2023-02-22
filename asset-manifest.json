@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/WidgetsX/static/css/main.ddc79295.css",
+    "main.js": "/WidgetsX/static/js/main.f429ae36.js",
+    "static/media/widgetsX-tagline.svg": "/WidgetsX/static/media/widgetsX-tagline.9e20f16d2fe54f5ca10e29351b35689e.svg",
+    "static/media/widgetsX-logo.svg": "/WidgetsX/static/media/widgetsX-logo.863ca928946ffd14997048de29df1939.svg",
+    "index.html": "/WidgetsX/index.html",
+    "main.ddc79295.css.map": "/WidgetsX/static/css/main.ddc79295.css.map",
+    "main.f429ae36.js.map": "/WidgetsX/static/js/main.f429ae36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddc79295.css",
+    "static/js/main.f429ae36.js"
+  ]
+}
