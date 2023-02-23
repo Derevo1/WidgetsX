@@ -1,3 +1,24 @@
 .container {
   max-width: 300px;
+  padding: 10px;
+  border-right: 1px solid rgb(186, 175, 175);
+}
+
+.nav_container {
+  margin: 0 0 20 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.nav_item a {
+  text-decoration: none;
+  color: black;
 }

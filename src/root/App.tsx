@@ -1,10 +1,14 @@
+import styles from './App.module.css';
+import { AppRoutes } from 'src/components/General/AppRoutes';
 import { NavMenu } from '../components/Menu/NavMenu';
-import './App.css';
 
 function App() {
   return (
     <>
-      <NavMenu />
+      <div className={styles.container}>
+        <NavMenu />
+        <AppRoutes />
+      </div>
     </>
   );
 }

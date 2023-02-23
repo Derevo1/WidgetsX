@@ -1,0 +1,11 @@
+.container {
+  width: 600px;
+  margin: auto;
+}
+
+.welcome_label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  white-space: nowrap;
+}
