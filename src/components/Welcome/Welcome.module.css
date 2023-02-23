@@ -1,3 +1,17 @@
+/* @keyframes welcome_label_animation{
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+} */
+
 .container {
   width: 600px;
   margin: auto;
@@ -8,4 +22,7 @@
   flex-direction: column;
   text-align: center;
   white-space: nowrap;
+  /* animation-name: welcome_label_animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; */
 }

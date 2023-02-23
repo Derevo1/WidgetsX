@@ -1,7 +1,24 @@
 .container {
   max-width: 300px;
+  min-width: 200px;
   padding: 10px;
   border-right: 1px solid rgb(186, 175, 175);
+  transition: all .2s linear;
+}
+
+.nav_toggle {
+  text-align: right;
+  cursor: pointer;
+}
+
+.nav_toggle_off {
+  text-align: center;
+  transform: rotate(180deg);
+}
+
+.container_hidden {
+  min-width: 0;
+  max-width: 50px;
 }
 
 .nav_container {
@@ -16,6 +33,12 @@
   column-gap: 10px;
   cursor: pointer;
   margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav_item_active {
+  background-color: #f2eae1;
 }
 
 .nav_item a {
