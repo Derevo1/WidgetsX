@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.illustration_container {
+  padding-top: 30px;
+}
+
+.signin_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+}
+
+.signin_container_items {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  row-gap: 10px;
+  min-width: 50%;
+}
+
+.signin_container_items button {
+  border: none;
+  background-color: var(--primary-color);
+  min-height: 39px;
+  cursor: pointer;
+}
+
+.signin_container_items button:hover {
+  background-color: var(--secondary-color);
+}
+
+.signin_container_items input {
+  border: 2px solid rgba(234, 228, 228, 0.729);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 3px;
+  transition: border 0.2s ease-in-out;
+}
+
+.signin_container_items input:focus {
+  outline: none;
+  border-color:rgba(193, 185, 185, 0.729);
+}

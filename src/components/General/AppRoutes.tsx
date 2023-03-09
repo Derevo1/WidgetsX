@@ -1,6 +1,6 @@
 import { AiOutlineAppstore, AiOutlineHome } from 'react-icons/ai'
 import { Route, Routes } from "react-router-dom";
-import { Welcome } from '../Welcome/Welcome';
+import { Authorization } from '../Authorization/Authorization';
 
 export const routesDefinition = [
   {
@@ -8,14 +8,14 @@ export const routesDefinition = [
     name: "Home",
     hidden: false,
     icon: <AiOutlineHome />,
-    element: <div style={{ width: '100%' }}>Home</div>
+    element: <div>Home</div>
   },
   {
-    path: "/WidgetsX",
-    name: "WidgetsX",
+    path: "/login",
+    name: "Home",
     hidden: true,
     icon: null,
-    element: <Welcome />
+    element: <Authorization />
   },
   {
     path: "/applications",
