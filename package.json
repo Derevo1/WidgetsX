@@ -10,7 +10,9 @@
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "axios": "^1.3.4",
     "gh-pages": "^5.0.0",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -18,6 +20,7 @@
     "react-scripts": "5.0.1",
     "serve": "^14.2.0",
     "typescript": "^4.9.5",
+    "use-debounce": "^9.0.3",
     "web-vitals": "^2.1.4"
   },
   "homepage": "https://derevo1.github.io/WidgetsX/",
@@ -48,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.191",
     "react-app-rewired": "^2.2.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0"
   }
