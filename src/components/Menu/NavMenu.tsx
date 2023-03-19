@@ -24,8 +24,8 @@ export function NavMenu(){
       <ul className={styles.nav_container}>
         {routesDefinition
           .filter((def) => !def.hidden)
-          .map((def) => 
-            <li>
+          .map((def, i) => 
+            <li key={i}>
               <Link to={def.path} style={{textDecoration: 'none', color: 'black'}}>
                 <div 
                   className={

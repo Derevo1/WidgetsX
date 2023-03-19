@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-useless-constructor */
 import { APIClient } from "src/lib/utils/api.client"
-import { ICheckUsernameExistsRes, ISubmitUserDataRes, IUser, IUserCreds } from "./interfaces/user-auth-api.interfaces"
+import { ICheckUsernameExistsRes, ISubmitUserDataRes, IUser, IUserCreds, IValidateAccessTokenRes } from "./interfaces/user-auth-api.interfaces"
 
 class UserAuthAPI extends APIClient {
   constructor(baseUrl: string){
@@ -12,6 +12,11 @@ class UserAuthAPI extends APIClient {
     
   //   throw new Error(err)
   // }
+
+  public async validateAccessToken(token: string){
+    return this.get<IValidateAccessTokenRes>('/user-authorization/validate/jwt', { token })
+      .then((res) => res.data)
+  }
 
   public async checkUsernameExistis(name: string){
     return this.get<ICheckUsernameExistsRes>('/user-authorization/check-username', { name })

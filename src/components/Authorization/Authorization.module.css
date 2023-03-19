@@ -7,11 +7,27 @@
   padding-top: 30px;
 }
 
+.forms_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+}
+
 .signin_container {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: white;
+}
+
+.signup_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  width: 100%;
 }
 
 .signin_container_items {
@@ -22,11 +38,31 @@
   min-width: 50%;
 }
 
-.signin_container_items button {
+.signup_container_items {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  row-gap: 20px;
+  min-width: 50%;
+}
+
+.signup_container_block {
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.authorization_button {
   border: none;
   background-color: var(--primary-color);
   min-height: 39px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button_disabled {
+  background-color: rgb(183 182 182 / 58%);;
+  pointer-events: none;
 }
 
 .signin_container_items button:hover {
@@ -53,6 +89,7 @@
 }
 
 .signup_label {
+  margin-top: 15px;
   text-align: center;
   cursor: pointer;
   color: rgb(0, 0, 0);

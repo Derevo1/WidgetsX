@@ -30,7 +30,7 @@ export const routesDefinition = [
 export function AppRoutes(){
   return (
     <Routes>
-      {routesDefinition.map((def) => <Route path={def.path} element={def.element} />)}
+      {routesDefinition.map((def, i) => <Route path={def.path} element={def.element} key={i} />)}
     </Routes>
   )
 }

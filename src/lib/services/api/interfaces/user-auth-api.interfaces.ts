@@ -15,7 +15,13 @@ export interface IUserCreds {
 }
 
 export interface ICheckUsernameExistsRes {
-  exists: boolean;
+  exist: boolean;
+}
+
+export interface IValidateAccessTokenRes {
+  valid: boolean;
+  error: string;
+  token: string;
 }
 
 export interface ISubmitUserDataRes {
