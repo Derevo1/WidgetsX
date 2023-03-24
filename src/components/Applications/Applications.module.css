@@ -1,0 +1,70 @@
+.applications_container {
+  display: flex;
+  column-gap: 20px;
+  align-items: flex-start;
+}
+
+.application_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 10px;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(233, 81, 81, 0.906);
+  padding: 10px;
+  width: 500px;
+  min-height: 150px;
+}
+
+.application_card_head {
+  display: flex;
+  position: relative;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.application_card_icon {
+  position: absolute;
+  left: 2%;
+  top: 40px;
+  z-index: -1;
+}
+
+.application_card_button {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #f2eae152;
+  border: none;
+}
+
+.application_card_stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  column-gap: 50%;
+  row-gap: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.stats_item_label {
+  font-size: small;
+  color: rgb(102, 98, 98);
+}
+
+.application_card_stats_item p {
+  margin-bottom: 5px;
+}
+
+.stats_toogle {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}

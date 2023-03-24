@@ -1,5 +1,5 @@
-import { AiOutlineArrowLeft } from 'react-icons/ai'
 import styles from './NavMenu.module.css'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 import { BrandLogo } from '../General/BrandLogo'
 import { Link, useLocation } from 'react-router-dom'
 import { routesDefinition } from '../General/AppRoutes'
