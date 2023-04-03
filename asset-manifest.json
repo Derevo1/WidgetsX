@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WidgetsX/static/css/main.ffe0aa47.css",
-    "main.js": "/WidgetsX/static/js/main.95ff3774.js",
+    "main.js": "/WidgetsX/static/js/main.b31d882c.js",
     "static/media/widgetsX-team-web.svg": "/WidgetsX/static/media/widgetsX-team-web.fbae1c3221a425b6a350e10e0dd6f7a5.svg",
     "static/media/widgetsX-team-analytics.svg": "/WidgetsX/static/media/widgetsX-team-analytics.41ad7940c64c077751f85784724c7c44.svg",
     "static/media/widgetsX-team-consulting.svg": "/WidgetsX/static/media/widgetsX-team-consulting.3252a3663684699035ce25d3f2a8adf3.svg",
@@ -11,10 +11,10 @@
     "static/media/widgetsX-logo.svg": "/WidgetsX/static/media/widgetsX-logo.863ca928946ffd14997048de29df1939.svg",
     "index.html": "/WidgetsX/index.html",
     "main.ffe0aa47.css.map": "/WidgetsX/static/css/main.ffe0aa47.css.map",
-    "main.95ff3774.js.map": "/WidgetsX/static/js/main.95ff3774.js.map"
+    "main.b31d882c.js.map": "/WidgetsX/static/js/main.b31d882c.js.map"
   },
   "entrypoints": [
     "static/css/main.ffe0aa47.css",
-    "static/js/main.95ff3774.js"
+    "static/js/main.b31d882c.js"
   ]
 }
