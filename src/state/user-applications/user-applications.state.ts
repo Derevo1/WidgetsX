@@ -1,4 +1,4 @@
-export const userApps = [
+export const initalUserApps = [
   {
     type: 'Instagram',
     label: 'Instagram Feed',
