@@ -4,12 +4,15 @@ import { BrandLogo } from '../General/BrandLogo'
 import { Link, useLocation } from 'react-router-dom'
 import { routesDefinition } from '../General/AppRoutes'
 import { useState } from 'react'
+import { useAppSelector } from 'src/lib/hooks/redux'
 
 export function NavMenu(){
+  const hiddeNavMenu = useAppSelector((s) => s.appLayout.hiddeNavMenu)
   const [ showNavMenu, setShowNavMenu ] = useState(true)
   const { pathname: currPath } = useLocation()
 
   return (
+    !hiddeNavMenu &&
     <div className={`${styles.container} ${!showNavMenu ? styles.container_hidden : ''}`}>
       <div 
         className={`${styles.nav_toggle} ${ !showNavMenu ? styles.nav_toggle_off : '' }`} 

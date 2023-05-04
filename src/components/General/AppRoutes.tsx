@@ -1,6 +1,7 @@
 import { AiOutlineAppstore, AiOutlineHome } from 'react-icons/ai'
 import { Route, Routes } from "react-router-dom";
 import { Home } from '../Home/Home';
+import { Builder } from '../AppBuilders/Builder';
 
 export const routesDefinition = [
   {
@@ -16,6 +17,13 @@ export const routesDefinition = [
     hidden: false,
     icon: <AiOutlineAppstore />,
     element: <div style={{ width: '100%' }}>Applications</div>
+  },
+  {
+    path: "/builder",
+    name: "Applications",
+    hidden: true,
+    icon: null,
+    element: <Builder/>
   },
 ]
 

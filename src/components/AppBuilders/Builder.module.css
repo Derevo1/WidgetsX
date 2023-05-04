@@ -1,0 +1,14 @@
+.builder_container {
+  width: 100%;
+}
+
+.builder_header {
+  display: flex;
+  background-color: aliceblue;
+  justify-content: space-between;
+}
+
+.builder_header_buttons {
+  display: flex;
+  column-gap: 10px;
+}
