@@ -4,11 +4,45 @@
 
 .builder_header {
   display: flex;
-  background-color: aliceblue;
+  background-color: #fff;
+  padding: 10px 10px 5px 5px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.title_input {
+  min-width: 100px;
+  background-color: #e0dfdf92;
+  border: none;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.title_input:focus {
+  outline: none;
+  background-color: #d2d1d192;
 }
 
 .builder_header_buttons {
   display: flex;
   column-gap: 10px;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  min-width: 50px;
+  border-radius: 3px;
+}
+
+.cancel:hover {
+  background-color: #e0dfdf92;
+}
+
+.save {
+  background-color: rgb(1, 170, 1);
+  color: #fff;
 }

@@ -27,11 +27,11 @@ export const Builder = () => {
     <>
       <div className={styles.builder_container}>
         <div className={styles.builder_header}>
-          <p>Untitled widget</p>
+          <input className={styles.title_input} placeholder='Untitled widget'/>
           <BrandLogo logoWidth='100px' hiddeTagLine={true} />
           <div className={styles.builder_header_buttons}>
-            <p>Cancel</p>
-            <p>Save</p>
+            <p className={`${styles.button} ${styles.cancel}`}>Cancel</p>
+            <p className={`${styles.button} ${styles.save}`}>Save</p>
           </div>
         </div>
         {buildersMap[type]}
