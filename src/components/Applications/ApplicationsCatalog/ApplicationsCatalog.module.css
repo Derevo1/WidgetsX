@@ -1,0 +1,20 @@
+.app_catalog_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 390px));
+  grid-template-rows: auto;
+  column-gap: 10px;
+}
+
+.card_container {
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(76,76,76,0.15);
+  background-color: white;
+  text-align: left;
+}
+
+.card_text {
+  margin-left: 20px;
+}

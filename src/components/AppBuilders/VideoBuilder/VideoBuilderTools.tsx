@@ -23,25 +23,27 @@ export const VideoBuilderTools = () => {
             className={`${styles.tools_menu_item} ${selectedTool === 'layout' ? styles.selected : ""}`}
             onClick={() => setSelectedTool('layout')}
           >
-            <AiOutlineLayout size={30}/>
+            <AiOutlineLayout size={20}/>
             <p>Layout</p>
           </div>
           <div 
             className={`${styles.tools_menu_item} ${selectedTool === 'video' ? styles.selected : ""}`}
             onClick={() => setSelectedTool('video')}
           >
-            <AiOutlineVideoCamera size={30}/>
+            <AiOutlineVideoCamera size={20}/>
             <p>Video</p>
           </div>
           <div 
             className={`${styles.tools_menu_item} ${selectedTool === 'color' ? styles.selected : ""}`}
             onClick={() => setSelectedTool('color')}
           >
-            <VscSymbolColor size={30}/>
+            <VscSymbolColor size={20}/>
             <p>Color</p>
           </div>
         </div>
-        {toolsEditorMap[selectedTool]}
+        <div className={styles.editor_container}>
+          {toolsEditorMap[selectedTool]}
+        </div>
       </div>
     </>
   )

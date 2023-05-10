@@ -1,8 +1,8 @@
 import styles from '../Applications.module.css'
-import { BsInstagram, BsCameraVideo, BsEye, BsEyeSlash } from 'react-icons/bs'
-import { ReactElement, useState } from 'react';
-import { IconType } from 'react-icons';
+import { BsEye, BsEyeSlash } from 'react-icons/bs'
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ApplicationIcon } from '../../partials/ApplicationIcon';
 
 interface IApplicationCardProps {
   id: number;
@@ -12,19 +12,9 @@ interface IApplicationCardProps {
   color?: string;
 }
 
-function getApplicationIcon(type: string){
-  const iconsMap: Record<string, ReactElement<IconType>> = {
-    'Instagram': <BsInstagram className={styles.application_card_icon} size={60} />,
-    'Video': <BsCameraVideo className={styles.application_card_icon} size={70} />
-  }
-
-  return iconsMap[type]
-}
-
 export const ApplicationCard = ({ type, status, label, color, id }: IApplicationCardProps) => {
   const [showStats, setShowStats] = useState(false)
   const [showEditLink, setEditShowLink] = useState(false)
-  const icon = getApplicationIcon(type)
   const defaultColor = '#e75151e7'
 
   return (
@@ -33,7 +23,7 @@ export const ApplicationCard = ({ type, status, label, color, id }: IApplication
         className={`${styles.application_card} ${showEditLink ? styles.filter : ''}`} 
         style={{backgroundColor: color || defaultColor}} 
       >
-        {icon}
+        <ApplicationIcon type={type} className={styles.application_card_icon} size={60}/>
         <div className={styles.application_card_head}>
           <h3>{label}</h3>
           <button className={styles.application_card_button}>Export</button>

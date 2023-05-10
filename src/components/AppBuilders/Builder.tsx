@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useAppDispatch } from "src/lib/hooks/redux"
 import { changeAppLayout } from "src/state/app-layout/app-layout.slice"
 import { VideoBuilder } from "./VideoBuilder/VideoBuilder"
-import { useSearchParams } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 import { BrandLogo } from '../General/BrandLogo'
 
 const buildersMap: Record<string, JSX.Element> = {
@@ -30,7 +30,9 @@ export const Builder = () => {
           <input className={styles.title_input} placeholder='Untitled widget'/>
           <BrandLogo logoWidth='100px' hiddeTagLine={true} />
           <div className={styles.builder_header_buttons}>
-            <p className={`${styles.button} ${styles.cancel}`}>Cancel</p>
+            <Link to={'/'} style={{textDecoration: 'none', color: 'black'}}>
+              <p className={`${styles.button} ${styles.cancel}`}>Cancel</p>
+            </Link>
             <p className={`${styles.button} ${styles.save}`}>Save</p>
           </div>
         </div>
