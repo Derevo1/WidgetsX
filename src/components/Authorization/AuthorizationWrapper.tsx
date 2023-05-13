@@ -30,7 +30,7 @@ export function AuthorizationWrapper({ children }: IAuthorizationWrapperProps){
 
   return (
     <>
-      {!isAuthorized ? <Authorization setToken={setToken} /> : children}
+      {!isAuthorized && !process.env.REACT_APP_DISABLE_AUTH ? <Authorization setToken={setToken} /> : children}
     </>
   )
 }

@@ -5,9 +5,11 @@ import { changeAppLayout } from "src/state/app-layout/app-layout.slice"
 import { VideoBuilder } from "./VideoBuilder/VideoBuilder"
 import { Link, useSearchParams } from "react-router-dom"
 import { BrandLogo } from '../General/BrandLogo'
+import { InstagramFeedBuilder } from './InstagramFeedBuilder/InstagramFeedBuilder'
 
 const buildersMap: Record<string, JSX.Element> = {
-  'Video': <VideoBuilder/>
+  'Video': <VideoBuilder/>,
+  'Instagram': <InstagramFeedBuilder/>
 }
 
 export const Builder = () => {
