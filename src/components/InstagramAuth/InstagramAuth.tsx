@@ -10,6 +10,7 @@ import { BiError } from 'react-icons/bi'
 import { getInstagramAPIClient } from "src/lib/services/api/instagram-api.client"
 import { TOKEN_KEY } from "../Authorization/AuthorizationWrapper"
 import { BrandLogo } from '../General/BrandLogo'
+import { updateIntegrationState } from 'src/state/instagram-integration/instagram-integration.slice'
 
 export const InstagramAuth = () => {
   const client = getInstagramAPIClient(localStorage.getItem(TOKEN_KEY))
@@ -30,8 +31,13 @@ export const InstagramAuth = () => {
     if(!error && code){
       client.generateAccessToken(code)
         .then((d) => {
-          console.log(d)
-
+          dispatch(
+            updateIntegrationState({
+              isIntegrationComplete: true,
+              externalProfileID: d.external_user_id,
+              isIntegrationProcessing: false
+            })
+          )
           setIsLoading(false)
         })
         .catch((_err) => {
@@ -44,15 +50,17 @@ export const InstagramAuth = () => {
       setIsErrorOccuerd(true)
       setIsLoading(false)
     }
-
-    if(!isLoading){
-      closeTab()
-    }
   
     return () => {
       dispatch(changeAppLayout({ hiddeNavMenu: false }))
     }
   }, [])
+
+  useEffect(() => {
+    if(!isLoading){
+      closeTab()
+    }
+  }, [isLoading])
 
   return (
     <>
@@ -81,7 +89,6 @@ export const InstagramAuth = () => {
                     </div>      
           }
         </div>
-
       </div>
     </>
   )

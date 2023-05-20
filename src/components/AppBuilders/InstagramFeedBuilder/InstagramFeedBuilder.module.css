@@ -93,6 +93,18 @@
   height: 48px;
 }
 
+.loader_wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: calc(100% - 58px);
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.297);
+}
+
 .profile_img_wrapp img {
   box-shadow: 0 0 0 2px rgb(28, 27, 27);
   box-sizing: border-box;

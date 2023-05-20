@@ -19,6 +19,11 @@ class InstagramAPI extends APIClient {
         throw new Error(e)
       })
   }
+
+  public async getUserMediaData(profileID: string){
+    return this.get<any>('/integrations/instagram/profile-data', { external_user_id: profileID })
+      .then((d) => d.data)
+  }
 }
 
 let _client: InstagramAPI = null

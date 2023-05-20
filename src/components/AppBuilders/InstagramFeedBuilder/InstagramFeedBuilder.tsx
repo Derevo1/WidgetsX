@@ -1,11 +1,21 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styles from './InstagramFeedBuilder.module.css'
 import { AiOutlineInstagram, AiOutlineHeart } from 'react-icons/ai'
 import { FaRegComment } from 'react-icons/fa'
 import { InstagranFeeTools } from "./InstagramFeedTools"
-import { useAppSelector } from 'src/lib/hooks/redux'
-import { useState } from 'react'
+import { useAppDispatch, useAppSelector } from 'src/lib/hooks/redux'
+import { useEffect, useState } from 'react'
+import { getInstagramAPIClient } from 'src/lib/services/api/instagram-api.client'
+import { TOKEN_KEY } from 'src/components/Authorization/AuthorizationWrapper'
+import { updateProfile } from 'src/state/instagram-feed/instagram-feed.slice'
+import { Loader } from 'src/components/General/Loader'
 
 export const InstagramFeedBuilder = () => {
+  const token = localStorage.getItem(TOKEN_KEY)
+  const client = getInstagramAPIClient(token)
+  const dispatch = useAppDispatch()
+
+  const { isIntegrationComplete, isIntegrationProcessing, externalProfileID } = useAppSelector((s) => s.instagramIntegration)
   const profile = useAppSelector((s) => (
     { 
       name: s.instagramFeed.profile_name,
@@ -16,8 +26,23 @@ export const InstagramFeedBuilder = () => {
   ))
   const [selectedPostIndex, setSelectedPostIndex] = useState<number>(0)
 
+  useEffect(() => {
+    if(isIntegrationComplete){
+      client.getUserMediaData(externalProfileID)
+        .then((d) => {
+          dispatch(updateProfile(d))
+        })
+        .catch((err) => alert(err?.message || 'Error occured'))
+    }
+  }, [isIntegrationComplete])
+
   return (
     <>
+      {isIntegrationProcessing && 
+        <div className={styles.loader_wrapper}>
+          <Loader/>
+        </div>
+      }
       <div className={styles.builder_container}>
         <InstagranFeeTools />
         <div className={styles.preview_container}>
