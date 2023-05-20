@@ -22,6 +22,81 @@
   height: 100%;
 }
 
+.export_container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.297);
+}
+
+.export_popup {
+  position: relative;
+  max-width: 630px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.export_popup h2 {
+  margin: 15px;
+}
+
+.export_popup p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.export_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.export_copy {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.hide_export_button {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: white;
+  background-color: rgba(217, 152, 152, 0.991);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.export_text_area {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #4a4a4a;
+  padding: 5px 20px 5px;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  background: #f6f6f6;
+  resize: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease;
+}
+
 .application_card {
   display: flex;
   flex-direction: column;

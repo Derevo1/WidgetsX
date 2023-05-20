@@ -27,6 +27,7 @@
   },
   "homepage": "https://derevo1.github.io/WidgetsX/",
   "scripts": {
+    "start:https": "HTTPS=true SSL_CRT_FILE='./localhost.pem' SSL_KEY_FILE='./localhost-key.pem' react-app-rewired start",
     "start": "react-app-rewired start",
     "start:build": "npm run build && serve -s build",
     "deploy": "npm run build && gh-pages -d build -b gh-pages",

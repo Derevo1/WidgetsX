@@ -8,9 +8,11 @@ interface IAuthorizationWrapperProps {
   children: ReactNode
 }
 
+export const TOKEN_KEY = 'widgetsx_token'
+
 export function AuthorizationWrapper({ children }: IAuthorizationWrapperProps){
   const [isAuthorized, setIsAuthorized] = useState(false)
-  const [token, setToken] = useState(localStorage.getItem('token'))
+  const [token, setToken] = useState(localStorage.getItem(TOKEN_KEY))
 
   const userAuthAPIClient = getUserAuthAPIClient()
 
@@ -24,7 +26,7 @@ export function AuthorizationWrapper({ children }: IAuthorizationWrapperProps){
       .validateAccessToken(token)
       .then(({ valid }) => {
         setIsAuthorized(valid)
-        localStorage.setItem('token', token)
+        localStorage.setItem(TOKEN_KEY, token)
       })
   }, [token])
 

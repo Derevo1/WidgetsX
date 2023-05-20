@@ -3,7 +3,7 @@ import axios, { AxiosInstance } from 'axios'
 export class APIClient {
   private instance: AxiosInstance = null
 
-  constructor(private baseUrl: string, private token?: string){
+  constructor(protected baseUrl: string, private token?: string){
     this.instance = axios.create({
       baseURL: this.baseUrl,
       headers: this.token 

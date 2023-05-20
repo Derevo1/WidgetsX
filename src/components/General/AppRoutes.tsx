@@ -2,6 +2,7 @@ import { AiOutlineAppstore, AiOutlineHome } from 'react-icons/ai'
 import { Route, Routes } from "react-router-dom";
 import { Home } from '../Home/Home';
 import { Builder } from '../AppBuilders/Builder';
+import { InstagramAuth } from '../InstagramAuth/InstagramAuth';
 
 export const routesDefinition = [
   {
@@ -24,6 +25,13 @@ export const routesDefinition = [
     hidden: true,
     icon: null,
     element: <Builder/>
+  },
+  {
+    path: "/instagram/auth",
+    name: "Instagram Auth",
+    hidden: true,
+    icon: null,
+    element: <InstagramAuth/>
   },
 ]
 
